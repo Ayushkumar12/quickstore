@@ -29,7 +29,7 @@ export default function Login() {
       </div>
       <div className="login">
         <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method='post'>
           <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
           <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
           <Link to={'/forgot'}>Forgot password?</Link>

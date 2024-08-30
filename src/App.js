@@ -2,6 +2,7 @@ import Login from './auth/Login';
 import { Routes ,Route} from 'react-router-dom';
 import Signup from './auth/Signup';
 import Home from './pages/Home';
+import './app.css'
 // import { AuthProvider, useAuth } from 'react-auth-kit';
 
 
