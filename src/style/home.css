@@ -1,0 +1,43 @@
+.hero{
+    display: flex;
+    margin: 20px;
+    height: 60dvh;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    width: 50%;
+    justify-content: center;
+}
+
+.left h1{
+    margin: 0ch;
+}
+.right{
+    display: flex;
+    width: 50%;
+}
+.right img{
+    width: 100%;
+    object-fit: contain;
+}
+.pop{
+    margin: 10px;
+}
+.books{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin: 10px;
+}
+.bookhead{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.bookhead a{
+    text-decoration: none;
+    color: black;
+}
