@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import shop from '../asserts/shop.png';
 import '../style/signup.css';
 import { Link } from 'react-router-dom';
-import {  createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import {  createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../api/Firebaseapi';
 
 export default function Signup() {
@@ -33,8 +33,10 @@ export default function Signup() {
                 <input type="email" id="email" placeholder='Enter your email address' value={email} onChange={(event) => setEmail(event.target.value)} required />
                 <input type="tel" id="phone" placeholder='Enter your number' value={phone} onChange={(event) => setPhone(event.target.value)} required />
                 <input type="password" id="password" placeholder="Enter your password" value={password} onChange={(event) => setPassword(event.target.value)} required />
-                <button type="submit">Submit</button>
+                <button type="submit" onClick={handleSubmit}>Submit</button>
             </form>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+
             <p>Already have account? <Link to="/login">Login</Link></p>
         </div>
     </div>

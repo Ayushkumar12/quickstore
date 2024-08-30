@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import shop from '../asserts/shop.png';
 import '../style/login.css';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import {  getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../api/Firebaseapi';
 
 export default function Login() {
