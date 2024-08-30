@@ -8,24 +8,44 @@
 .signup form{
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    width: 30vw;
 }
-
-.signup input{
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 25vw;
+.input{
+    display: flex;
+    width: 100%;
+}
+.input input{
+    margin: 5px;
+    padding: 15px 20px;
+    width: 100%;
+    font-weight: bold;
+    border-width: 0.5px;
+    border-radius: 30px;
+}
+.input2{
+    margin: 5px;
+}
+.input2 input{
+    margin: 5px;
+    padding: 0px 20px;
+    width: 85%;
     height: 50px;
     font-weight: bold;
     border-width: 1.5px;
     border-radius: 30px;
 }
-.signup button{
+
+/* .signup input{
+    margin-bottom: 10px;
+    width: 100%;
+} */
+.input2 button{
     margin-top: 10px;
     padding: 10px 20px;
     background-color: blueviolet;
     color: white;
     border: none;
+    width: 100%;
     border-radius: 30px;
     cursor: pointer;
 }

@@ -49,12 +49,16 @@ export default function Signup() {
         <div className="signup">
             <h1>Sign Up</h1>
             <form>
-                <input type="text" id="firstname" placeholder='Enter your name' value={fname} onChange={(event) => setFname(event.target.value)} required />
-                <input type="text" id="lastname" placeholder='Enter your name' value={lname} onChange={(event) => setLname(event.target.value)} required />
+              <div className="input">
+                <input type="text" id="firstname" placeholder='Enter your first name' value={fname} onChange={(event) => setFname(event.target.value)} required />
+                <input type="text" id="lastname" placeholder='Enter your last name' value={lname} onChange={(event) => setLname(event.target.value)} required />
+              </div>
+              <div className="input2">
                 <input type="email" id="email" placeholder='Enter your email address' value={email} onChange={(event) => setEmail(event.target.value)} required />
                 <input type="tel" id="phone" placeholder='Enter your number' value={phone} onChange={(event) => setPhone(event.target.value)} required />
                 <input type="password" id="password" placeholder="Enter your password" value={password} onChange={(event) => setPassword(event.target.value)} required />
                 <button type="submit" onClick={handleSubmit}>Submit</button>
+              </div>
             </form>
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
