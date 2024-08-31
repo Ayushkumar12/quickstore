@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/quickstore/static/css/main.7a600b89.css",
+    "main.js": "/quickstore/static/js/main.41b6e863.js",
+    "static/js/453.074f229b.chunk.js": "/quickstore/static/js/453.074f229b.chunk.js",
+    "static/media/shop.png": "/quickstore/static/media/shop.6cc499f7b76fd3f73bbb.png",
+    "index.html": "/quickstore/index.html",
+    "main.7a600b89.css.map": "/quickstore/static/css/main.7a600b89.css.map",
+    "main.41b6e863.js.map": "/quickstore/static/js/main.41b6e863.js.map",
+    "453.074f229b.chunk.js.map": "/quickstore/static/js/453.074f229b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a600b89.css",
+    "static/js/main.41b6e863.js"
+  ]
+}
