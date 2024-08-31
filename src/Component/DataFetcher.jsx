@@ -9,36 +9,40 @@ const DataFetcher = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('https://api.itbook.store/1.0/search/mongodb', {
-        headers: {
+          headers: {
             Accept: 'application/json'
-        }
-        })
-        .then(response => {
-        console.log(response.data); // This will contain the array of book objects
-        // Process the book data for your component
-        })
-        .catch(error => {
-        console.error('Error fetching books:', error);
+          }
         });
-        
-        setData(response);
-        console.log(data)
+
+        if (response.status === 200) {
+          setData(response.data.books);
+        } else {
+          setError(`Error ${response.status}: ${response.statusText}`);
+        }
       } catch (error) {
-        setError(error);
+        setError(error.message);
       }
     };
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Error: {error}</div>;
   }
 
   return (
-    <div>
-      {/* {data.map((book) => (
-        <div>{book.name}</div>
-      ))} */}
+      <div className='feed'>
+      {data.map((book) => (
+        <div className="user" data-aos='fade-up' key={book.isbn13}>
+            <img src={book.image} alt="book" />
+            <h3>{book.title}</h3>
+            <p>Good</p>
+        </div>
+      ))}
     </div>
   );
 };

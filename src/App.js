@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import './app.css'
 import Navbar from './Component/Navbar';
 import Footer from './Component/Footer';
-import DataFetcher from './Component/DataFetcher';
 // import { AuthProvider, useAuth } from 'react-auth-kit';
 
 
@@ -19,7 +18,6 @@ function App() {
           <Route exact path="/login" element={<Login/>} />
         </Routes>
       <Footer/>
-      <DataFetcher/>
     </div>
   );
 }

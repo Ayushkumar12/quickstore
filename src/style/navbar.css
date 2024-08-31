@@ -55,4 +55,28 @@ nav img{
     transition: 0.5s all;
 
 }
-    /* @media screen and (max-width: 600px){ */
+.mobile{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    /* body {
+      background-color: lightblue;
+    } */
+    .bottom{
+        display: none;
+    }
+    .span{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mobile span{
+        background-color: aqua;
+        height: 5px;
+        width: 30px;
+        margin: 2px;
+    }
+  }

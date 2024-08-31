@@ -1,15 +1,30 @@
+
 .book{
     margin: 5px;
     text-align: center;
     background-color: aqua;
     border-radius: 20px;
     padding: 10px;
+    width: 20%;
+    height: 5%;
 }
 .book img{
-    margin: 5px;
-    width: 15dvw;
     border-radius: 20px;
+    width: 200px;
 }
-.pro:first-child{
-    margin-left: 140px;
+.book a{
+    text-decoration: none;
+    color: white;
+}
+.book button{
+    text-decoration: none;
+    background-color: rgb(70, 70, 255);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    border: none;
+}
+@media only screen and (max-width: 600px) {
+    .book{
+        width: fit-content;
+    }
 }

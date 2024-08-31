@@ -1,31 +1,32 @@
-body{
+body {
     overflow-x: hidden;
     width: 100dvw;
     scrollbar-width: 0px;
 }
 .hero{
     display: flex;
-    margin: 20px;
+    flex-wrap: nowrap;
+    padding: 20px;
     height: 90dvh;
+    align-items: center;
 }
 .left{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin-right: 5px;
-    width: 50%;
-    font-size: 1.5rem;
-    justify-content: center;
+    width: 90vw;
 }
 
 .left h1{
-    margin: 0ch;
+    width: fit-content;
 }
-.right{
+.span1{
     display: flex;
-    width: 50%;
+    width: fit-content;
 }
-.right img{
-    width: 100%;
+.image{
+    width: 100dvw;
     object-fit: contain;
 }
 .pop{
@@ -35,8 +36,9 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     overflow-x: scroll;
-    margin: 10px;
+    padding: 10px;
 }
 .bookhead{
     display: flex;
@@ -51,4 +53,22 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+}
+@media only screen and (max-width: 600px) {
+
+    .hero{
+        height: fit-content;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image{
+        width: 90%;
+    }
+    .left{
+        align-items: center;
+    }
+    .books{
+        width: 100%;
+    }
 }

@@ -1,23 +1,52 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import '../style/card.css'
-import book from '../book.json'
-import Aos from 'aos';
 
-export default function Card() {
-  Aos.init({offset: 200,
-    delay: 3,
-    duration: 400,
-    easing: 'ease-in-out',
-    once: false
-  });
+const Card = () => {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.itbook.store/1.0/search/mongodb', {
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+
+        if (response.status === 200) {
+          setData(response.data.books);
+        } else {
+          setError(`Error ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <div className='pro'>
-        <div className="book" data-aos='zoom-in-up'>
-            <img src="https://via.placeholder.com/150" alt="book" />
-            <h3>Book Title</h3>
-            <p>Author Name</p>
-            <span>$9.99</span>
+    <>
+      {data.map((book) => (
+        <div className="book" data-aos='zoom-in-up' key={book.isbn13}>
+            <img src={book.image} alt="book" />
+            <h3>{book.title}</h3>
+            <p>{book.price}</p>
+            <button><a href={book.url}>Buy Now</a></button>
         </div>
-    </div>
+      ))}
+    </>
   );
-}
+};
+
+export default Card;
