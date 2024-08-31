@@ -4,6 +4,8 @@ import Signup from './auth/Signup';
 import Home from './pages/Home';
 import './app.css'
 import Navbar from './Component/Navbar';
+import Footer from './Component/Footer';
+import DataFetcher from './Component/DataFetcher';
 // import { AuthProvider, useAuth } from 'react-auth-kit';
 
 
@@ -16,6 +18,8 @@ function App() {
           <Route path="/signup" element={<Signup/>} />
           <Route exact path="/login" element={<Login/>} />
         </Routes>
+      <Footer/>
+      <DataFetcher/>
     </div>
   );
 }

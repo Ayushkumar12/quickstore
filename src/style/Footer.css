@@ -1,0 +1,57 @@
+.footer{
+    background-color: rgb(38, 38, 255);
+    border-radius: 20px 20px 0px 0px;
+    width: 99dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.footer form{
+    background-color: rgb(155, 208, 255);
+    padding: 10px;
+    border-radius: 50px;
+    width: 50%;
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+.footer button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(76, 0, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+}
+.foot{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100dvw;
+}
+.foot div{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.5rem;
+}
+.foot div span{
+    margin: 5px;
+}

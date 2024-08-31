@@ -1,7 +1,15 @@
 .book{
     margin: 5px;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 10px;
 }
 .book img{
     margin: 5px;
     width: 15dvw;
+    border-radius: 20px;
+}
+.pro:first-child{
+    margin-left: 140px;
 }

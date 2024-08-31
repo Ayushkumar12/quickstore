@@ -2,8 +2,7 @@ nav ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    font: 2rem;
-    margin: 0px 5px;
+    margin: 0px;
     padding: 5px;
 }
 h3{
@@ -12,6 +11,8 @@ h3{
 .top{
     display: flex;
     justify-content: space-between;
+    background-color: rgb(81, 81, 252);
+    border-radius: 0px 0px 10px 10px;
 }
 .span{
     display: block;
@@ -26,17 +27,32 @@ h3{
 }
 nav ul li{
     margin-right: 20px;
+    padding: 0px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 nav a{
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    color: black;
     font-weight: 500;
 }
 nav{
     width: 100dvw;
+    filter: drop-shadow(0px 0px 10px rgb(125, 125, 255));
 
 }
 nav img{
     width : 50px;
+}
+.bottom li:hover{
+    background-color: aqua;
+    transition: 0.5s all;
+}
+.bottom li:hover a{
+    color: black;
+    transition: 0.5s all;
+
 }
     /* @media screen and (max-width: 600px){ */
