@@ -16,6 +16,10 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-track {
     background-color: #ffe0dd;
 }
+body{
+    background-color: #ffffff;
+
+}
 .hero{
     display: flex;
     flex-wrap: nowrap;
@@ -33,9 +37,15 @@ body::-webkit-scrollbar-track {
 
 .left h1{
     width: fit-content;
+    font-size: 5rem;
+    margin: 10px 0px;
+    color: #8820ff;
+    text-decoration: underline;
 }
 .span1{
     display: flex;
+    font-size: 1.2rem;
+    margin: 10px 0px;
     width: fit-content;
 }
 .image{
@@ -45,7 +55,7 @@ body::-webkit-scrollbar-track {
 .pop{
     margin: 10px;
 }
-.books{
+.products{
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -53,14 +63,18 @@ body::-webkit-scrollbar-track {
     overflow-x: scroll;
     padding: 10px;
 }
-.bookhead{
+.shophead{
     display: flex;
     justify-content: space-between;
     margin: 10px;
+    font-size: 1.2rem;
 }
-.bookhead a{
+.shophead a{
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
+    background-color: #8820ff;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 .feedback{
     display: flex;
@@ -80,6 +94,12 @@ body::-webkit-scrollbar-track {
     }
     .left{
         align-items: center;
+    }
+    .left h1{
+        font-size: 2rem;
+    }
+    .span1{
+        font-size: 1rem;
     }
     .books{
         width: 100%;

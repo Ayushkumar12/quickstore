@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import './app.css'
 import Navbar from './Component/Navbar';
 import Footer from './Component/Footer';
-import Books from './pages/Books';
+import Shop from './pages/Shop';
+import Contact from './pages/Contact';
 // import { AuthProvider, useAuth } from 'react-auth-kit';
 
 
@@ -15,7 +16,8 @@ function App() {
       <Navbar />
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/books" element={<Books/>} />
+          <Route path="/Products" element={<Shop/>} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="/signup" element={<Signup/>} />
           <Route exact path="/login" element={<Login/>} />
         </Routes>

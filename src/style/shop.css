@@ -1,0 +1,31 @@
+.allpro{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.shop1{
+    max-height: 500px;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.shop1 img{
+    height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+.col button{
+    background-color: blue;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}

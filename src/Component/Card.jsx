@@ -8,7 +8,7 @@ const Card = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://fakestoreapi.com/products')
+        const response = await fetch('https://fakestoreapi.com/products?limit=5')
           .then(res => res.json())
 
         if (response) {
@@ -32,15 +32,15 @@ const Card = () => {
   }
 
   return (
-    <div className='books'>
-      {data.map((book) => (
-        <div className="book" data-aos='zoom-in-up' key={book.id}>
-            <img src={book.image} alt="book" />
+    <div className='products'>
+      {data.map((shop) => (
+        <div className="shop" data-aos='zoom-in-up' key={shop.id}>
+            <img src={shop.image} alt="shop" />
             <div className="details"></div>
-            <h3>{book.title}</h3>
-            <p>${book.price}</p>
-            <p> Rating : {book.rating.rate}</p>
-            <button><a href={book.url}>Buy Now</a></button>
+            <h3>{shop.title}</h3>
+            <p>${shop.price}</p>
+            <p> Rating : {shop.rating.rate}</p>
+            <button><a href={shop.url}>Buy Now</a></button>
         </div>
       ))}
     </div>

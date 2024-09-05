@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/home.css';
-import shop from '../asserts/shop.png'
+import shop from '../asserts/shop.gif'
 import { Link } from 'react-router-dom';
 import Card from '../Component/Card';
 import Card2 from '../Component/Card2';
@@ -10,15 +10,15 @@ export default function Home() {
     <main>
       <div className="hero">
         <div className="left">
-          <h1>BookStore</h1>
-          <p className='span1'>Explore a vast collection of books that cater to every interest and curiosity. Whether you're delving into the depths of history, unraveling the mysteries of science, or losing yourself in the world of fiction, BookStore has something for everyone.</p>
+          <h1>QuickStore</h1>
+          <p className='span1'>Welcome to QuickStore, your one-stop online shopping destination. Browse our vast collection of products, enjoy seamless checkout, and experience the ultimate in online retail convenience</p>
         </div>
-        <img src={shop} alt="book" className='image' />
+        <img src={shop} alt="shop" className='image' />
       </div>
       <section className="pop">
-        <div className="bookhead">
-          <h2>Trending Books</h2>
-          <p><Link to='products'>Show more</Link></p>
+        <div className="shophead">
+          <h2>New Products</h2>
+          <p><Link to='/products'>Show more</Link></p>
         </div>
         <div>
           <Card/>
