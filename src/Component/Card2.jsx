@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 // import book from '../book.json'
 
 export default function Card2() {
-  Aos.init({offset: 200,
+  Aos.init({offset: 400,
     delay: 3,
     duration: 400,
     easing: 'ease-in-out',

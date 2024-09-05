@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import '../style/card.css'
 
@@ -9,16 +8,13 @@ const Card = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.itbook.store/1.0/search/mongodb', {
-          headers: {
-            Accept: 'application/json'
-          }
-        });
+        const response = await fetch('https://fakestoreapi.com/products')
+          .then(res => res.json())
 
-        if (response.status === 200) {
-          setData(response.data.books);
+        if (response) {
+          setData(response);
         } else {
-          setError(`Error ${response.status}: ${response.statusText}`);
+          setError('Error: No data returned');
         }
       } catch (error) {
         setError(error.message);
@@ -27,25 +23,27 @@ const Card = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
 
   if (error) {
     return <div>Error: {error}</div>;
   }
 
   return (
-    <>
+    <div className='books'>
       {data.map((book) => (
-        <div className="book" data-aos='zoom-in-up' key={book.isbn13}>
+        <div className="book" data-aos='zoom-in-up' key={book.id}>
             <img src={book.image} alt="book" />
+            <div className="details"></div>
             <h3>{book.title}</h3>
-            <p>{book.price}</p>
+            <p>${book.price}</p>
+            <p> Rating : {book.rating.rate}</p>
             <button><a href={book.url}>Buy Now</a></button>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

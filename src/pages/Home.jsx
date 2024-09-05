@@ -7,7 +7,7 @@ import Card2 from '../Component/Card2';
 
 export default function Home() {
   return (
-    <>
+    <main>
       <div className="hero">
         <div className="left">
           <h1>BookStore</h1>
@@ -20,7 +20,7 @@ export default function Home() {
           <h2>Trending Books</h2>
           <p><Link to='products'>Show more</Link></p>
         </div>
-        <div className="books">
+        <div>
           <Card/>
         </div>
       </section>
@@ -29,6 +29,6 @@ export default function Home() {
         <Card2/>
         <Card2/>
       </section>
-    </>
+    </main>
   );
 }
