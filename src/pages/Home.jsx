@@ -13,7 +13,9 @@ export default function Home() {
           <h1>QuickStore</h1>
           <p className='span1'>Welcome to QuickStore, your one-stop online shopping destination. Browse our vast collection of products, enjoy seamless checkout, and experience the ultimate in online retail convenience</p>
         </div>
-        <img src={shop} alt="shop" className='image' />
+        <div className="right">
+          <img src={shop} alt="shop" className='image' />
+        </div>
       </div>
       <section className="pop">
         <div className="shophead">

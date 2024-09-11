@@ -1,7 +1,13 @@
+import Aos from 'aos';
 import React, { useState, useEffect } from 'react';
-import '../style/shop.css'
+import '../style/product.css'
 
 const Shop = () => {
+  Aos.init({
+    offset:200,
+    easing: 'ease-in-out',
+    once: false,
+  });
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
@@ -34,14 +40,13 @@ const Shop = () => {
   return (
     <div className='allpro'>
       {data.map((shop) => (
-        <div className="shop1" data-aos='zoom-in-up' key={shop.id}>
+        <div className="shop" data-aos='zoom-in-up' key={shop.id}>
             <img src={shop.image} alt="shop" />
             <div className="col">
             <h3>{shop.title}</h3>
             <p>{shop.price}</p>
             <button><a href={shop.url}>Buy Now</a></button>
             </div>
-            
         </div>
       ))}
     </div>

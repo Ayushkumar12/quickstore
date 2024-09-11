@@ -13,10 +13,10 @@ export default function Footer() {
                 <h2>Contact us</h2>
             </div>
             <div>
-                <span>Phone</span>
-                <span>Email</span>
-                <span>Linkedin</span>
-                <span>Github</span>
+                <span>+91 7838945961</span>
+                <span>Ayushkumar112003@gmail.com</span>
+                <span>Ayush Kumar</span>
+                <span>Ayushkumar12</span>
             </div>
         </section>
     </footer>

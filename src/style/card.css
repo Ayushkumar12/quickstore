@@ -1,12 +1,21 @@
-
+.allpro{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .shop{
-    text-align: center;
-    /* background-color: aqua; */
-    border-radius: 20px;
+    max-height: 500px;
+    max-width: 500px;
+    width: 250px;
     padding: 10px;
-    width: 600px;
     border: 1px solid #ccc;
     margin: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
 }
 .details{
     display: flex;
@@ -15,9 +24,8 @@
     justify-content: space-between;
 }
 .shop img{
-    border-radius: 20px;
-    width: 300px;
-    height: 200px;
+    max-height: 250px;
+    max-width: 100%;
     object-fit: contain;
 }
 .shop a{
@@ -33,6 +41,6 @@
 }
 @media only screen and (max-width: 600px) {
     .shop{
-        width: fit-content;
+        width: 100dvw;
     }
 }

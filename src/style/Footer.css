@@ -56,7 +56,13 @@
     margin: 5px;
 }
 @media only screen and (max-width: 600px) {
-    .footer{
-        width: 100vw;
+    
+    .foot{
+        width: 100%;
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    .foot h2{
+        margin-bottom: 5px;
     }
 }

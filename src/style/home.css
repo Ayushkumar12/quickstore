@@ -22,35 +22,36 @@ body{
 }
 .hero{
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 20px;
-    height: 90dvh;
     align-items: center;
 }
 .left{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-right: 5px;
-    width: 90vw;
+    width: 50%;
 }
 
 .left h1{
     width: fit-content;
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 10px 0px;
     color: #8820ff;
     text-decoration: underline;
 }
 .span1{
-    display: flex;
     font-size: 1.2rem;
     margin: 10px 0px;
-    width: fit-content;
+}
+.right{
+    width: 50%;
+    object-fit: contain;
 }
 .image{
-    width: 100dvw;
-    object-fit: contain;
+    width: 100%;
+
 }
 .pop{
     margin: 10px;
@@ -86,8 +87,16 @@ body{
 
     .hero{
         height: fit-content;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .right{
+        width: 100%;
+        margin: 10px 0px;
     }
     .image{
         width: 90%;

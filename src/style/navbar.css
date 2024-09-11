@@ -13,6 +13,8 @@ h3{
     justify-content: space-between;
     background-color: rgb(81, 81, 252);
     border-radius: 0px 0px 10px 10px;
+    box-shadow: inset 0px -5px 10px rgb(169, 138, 255);
+    
 }
 .span{
     display: block;

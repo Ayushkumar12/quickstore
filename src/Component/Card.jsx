@@ -1,7 +1,14 @@
+import Aos from 'aos';
 import React, { useState, useEffect } from 'react';
 import '../style/card.css'
 
 const Card = () => {
+  Aos.init({
+    offset:200,
+    // duration: 1000,
+    easing: 'ease-in-out',
+    once: false,
+  });
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
